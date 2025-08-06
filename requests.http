@@ -1,0 +1,10 @@
+### Create a new profile with photos
+POST http://localhost:8080/api/profiles
+Content-Type: multipart/form-data
+
+# JSON part
+data={"name":"Alice","age":25,"bio":"Loves hiking"};type=application/json
+
+# Photo parts (use absolute or relative paths to your files)
+photos=@/absolute/path/to/1.jpg
+photos=@/absolute/path/to/2.jpg

@@ -5,10 +5,7 @@ import com.project.tinder_clone.services.UserProfileService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/profiles")
@@ -21,4 +18,11 @@ public class UserProfileController {
         UserProfile saved = service.createProfile(profile);
         return ResponseEntity.ok(saved);
     }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<UserProfile> getById(@PathVariable("id") long id) {
+        UserProfile userProfile = service.getProfileById(id);
+        return ResponseEntity.ok(userProfile);
+    }
+
 }

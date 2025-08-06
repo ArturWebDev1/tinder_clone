@@ -8,5 +8,12 @@ Content-Type: application/json
   "bio": "Loves hiking"
 }
 
+
 ### DELETE request
 DELETE http://localhost:8080/api/profiles/1
+
+### GET request
+GET http://localhost:8080/api/profiles/2
+
+
+

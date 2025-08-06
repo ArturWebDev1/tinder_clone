@@ -19,8 +19,16 @@ public class UserProfileController {
         return ResponseEntity.ok(saved);
     }
 
+
     @DeleteMapping(path = "/{id}")
     public void deleteProfileById(@PathVariable("id") long id) {
         service.deleteProfileById(id);
     }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<UserProfile> getById(@PathVariable("id") long id) {
+        UserProfile userProfile = service.getProfileById(id);
+        return ResponseEntity.ok(userProfile);
+    }
+
 }

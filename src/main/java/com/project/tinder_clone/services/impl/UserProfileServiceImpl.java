@@ -21,7 +21,8 @@ public class UserProfileServiceImpl implements UserProfileService {
     @Override
     public void deleteProfileById(Long id) {
         userRepo.deleteById(id);
-      
+    }
+
     @Override
     public UserProfile getProfileById(long id) {
         return userRepo.findById(id)

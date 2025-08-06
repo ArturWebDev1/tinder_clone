@@ -1,4 +1,4 @@
-package src.main.java.com.project.tinder_clone;
+package com.project.tinder_clone;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

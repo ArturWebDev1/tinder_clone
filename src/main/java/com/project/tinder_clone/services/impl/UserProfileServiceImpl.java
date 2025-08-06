@@ -15,4 +15,9 @@ public class UserProfileServiceImpl implements UserProfileService {
     public UserProfile createProfile(UserProfile profile) {
         return userRepo.save(profile);
     }
+
+    @Override
+    public void deleteProfileById(Long id) {
+        userRepo.deleteById(id);
+    }
 }

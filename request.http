@@ -7,3 +7,6 @@ Content-Type: application/json
   "age": 18,
   "bio": "Loves hiking"
 }
+
+### DELETE request
+DELETE http://localhost:8080/api/profiles/1

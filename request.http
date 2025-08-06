@@ -1,0 +1,9 @@
+### POST request
+POST http://localhost:8080/api/profiles
+Content-Type: application/json
+
+{
+  "name": "Alice",
+  "age": 18,
+  "bio": "Loves hiking"
+}

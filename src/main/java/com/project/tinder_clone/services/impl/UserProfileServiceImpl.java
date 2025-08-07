@@ -24,7 +24,7 @@ public class UserProfileServiceImpl implements UserProfileService {
     }
 
     @Override
-    public UserProfile getProfileById(long id) {
+    public UserProfile getProfileById(Long id) {
         return userRepo.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "User profile not found with id " + id));
 

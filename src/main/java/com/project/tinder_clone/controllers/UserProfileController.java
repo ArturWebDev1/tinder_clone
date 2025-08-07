@@ -21,12 +21,12 @@ public class UserProfileController {
 
 
     @DeleteMapping(path = "/{id}")
-    public void deleteProfileById(@PathVariable("id") long id) {
+    public void deleteProfileById(@PathVariable("id") Long id) {
         service.deleteProfileById(id);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<UserProfile> getById(@PathVariable("id") long id) {
+    public ResponseEntity<UserProfile> getById(@PathVariable("id") Long id) {
         UserProfile userProfile = service.getProfileById(id);
         return ResponseEntity.ok(userProfile);
     }

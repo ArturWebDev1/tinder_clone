@@ -25,6 +25,6 @@ public class UserProfile {
     @Min(18)    private int age;
     @Size(max=500) private String bio;
 
-    @OneToMany(mappedBy = "profile", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<String> photos; // photo's urls
+//    @OneToMany(mappedBy = "profile", cascade = CascadeType.ALL, orphanRemoval = true)
+//    private List<String> photos; // photo's urls
 }

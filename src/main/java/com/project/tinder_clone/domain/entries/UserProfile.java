@@ -1,14 +1,12 @@
 package com.project.tinder_clone.domain.entries;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.*;
 
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -26,4 +24,7 @@ public class UserProfile {
     private String name;
     @Min(18)    private int age;
     @Size(max=500) private String bio;
+
+    @OneToMany(mappedBy = "profile", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<String> photos; // photo's urls
 }

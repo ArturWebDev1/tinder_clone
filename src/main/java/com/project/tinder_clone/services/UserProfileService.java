@@ -9,5 +9,4 @@ public interface UserProfileService {
     void deleteProfileById(Long id);
 
     UserProfile getProfileById(Long id);
-
 }

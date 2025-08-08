@@ -10,4 +10,6 @@ public interface UserProfileService {
 
     UserProfile getProfileById(Long id);
 
+    UserProfile updateProfileById(Long id, UserProfile profile);
+
 }

@@ -11,24 +11,32 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/profiles")
 @RequiredArgsConstructor
 public class UserProfileController {
-    private final UserProfileService service;
+    private final UserProfileService profileService;
 
     @PostMapping
     public ResponseEntity<UserProfile> create(@RequestBody @Valid UserProfile profile) {
-        UserProfile saved = service.createProfile(profile);
+        UserProfile saved = profileService.createProfile(profile);
         return ResponseEntity.ok(saved);
     }
 
 
     @DeleteMapping(path = "/{id}")
     public void deleteProfileById(@PathVariable("id") Long id) {
-        service.deleteProfileById(id);
+        profileService.deleteProfileById(id);
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<UserProfile> getById(@PathVariable("id") Long id) {
-        UserProfile userProfile = service.getProfileById(id);
+        UserProfile userProfile = profileService.getProfileById(id);
         return ResponseEntity.ok(userProfile);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<UserProfile> updateProfileById(
+            @PathVariable("id") Long id,
+            @RequestBody UserProfile profile) {
+        UserProfile updatedProfile = profileService.updateProfileById(id, profile);
+        return ResponseEntity.ok(updatedProfile);
     }
 
 }

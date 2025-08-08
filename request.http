@@ -1,4 +1,4 @@
-### POST request
+### POST requests
 POST http://localhost:8080/api/profiles
 Content-Type: application/json
 
@@ -8,12 +8,24 @@ Content-Type: application/json
   "bio": "Loves hiking"
 }
 
+### GET requests
+GET http://localhost:8080/api/profiles/1
 
-### DELETE request
+
+### UPDATE requests
+PUT http://localhost:8080/api/profiles/1
+Content-Type: application/json
+
+{
+  "name": "dfsg",
+  "age": 19,
+  "bio": "Loafdafves hiking"
+}
+
+
+### DELETE requests
 DELETE http://localhost:8080/api/profiles/1
 
-### GET request
-GET http://localhost:8080/api/profiles/1
 
 
 

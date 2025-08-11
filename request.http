@@ -8,6 +8,17 @@ Content-Type: application/json
   "bio": "Loves hiking"
 }
 
+### POST upload photo
+POST http://localhost:8080/api/photos/upload
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="file"; filename="caption.jpg"
+Content-Type: image/jpeg
+
+< ./src/main/resources/photos/caption.jpg
+--WebAppBoundary--
+
 ### GET requests
 GET http://localhost:8080/api/profiles/1
 
@@ -25,6 +36,9 @@ Content-Type: application/json
 
 ### DELETE requests
 DELETE http://localhost:8080/api/profiles/1
+
+
+
 
 
 

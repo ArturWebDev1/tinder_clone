@@ -20,7 +20,7 @@ Content-Type: image/jpeg
 --WebAppBoundary--
 
 ### GET requests
-GET http://localhost:8080/api/profiles/1
+GET http://localhost:8080/api/profiles/5
 
 
 ### UPDATE requests

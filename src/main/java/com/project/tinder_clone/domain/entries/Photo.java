@@ -13,12 +13,15 @@ import lombok.*;
 public class Photo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", updatable = false, nullable = false)
     private Long id;
 
     @NotBlank
+    @Column(nullable=false)
     private String url;
-    @ManyToOne
-    @JoinColumn(name="user_id")
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="user_id", nullable = false)
     private UserProfile user;
 }
 

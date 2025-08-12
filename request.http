@@ -20,11 +20,11 @@ Content-Type: image/jpeg
 --WebAppBoundary--
 
 ### GET requests
-GET http://localhost:8080/api/profiles/5
+GET http://localhost:8080/api/profiles/9
 
 
 ### UPDATE requests
-PUT http://localhost:8080/api/profiles/1
+PUT http://localhost:8080/api/profiles/8
 Content-Type: application/json
 
 {
@@ -35,7 +35,7 @@ Content-Type: application/json
 
 
 ### DELETE requests
-DELETE http://localhost:8080/api/profiles/1
+DELETE http://localhost:8080/api/profiles/8
 
 
 

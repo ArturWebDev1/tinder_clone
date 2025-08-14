@@ -47,6 +47,7 @@ public class UserProfile implements Serializable {
 //    @Column(nullable=false)
 //    private double latitude = 38.3;  // take this input later from a user
 
+
     // A one-to-one relationship with the Preference entity.
     // 'cascade = CascadeType.ALL' ensures that saving/deleting a UserProfile
     // will also save/delete its associated Preference.
